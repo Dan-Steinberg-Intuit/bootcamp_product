@@ -1,0 +1,37 @@
+.box {
+	height: 150px;
+	width: 250px;
+	border: 2px solid black;
+}
+
+.red-box {
+	background-color: darkred;
+}
+
+.green-box {
+	background-color: darkgreen;
+}
+
+.upper-center-box {
+	position: relative;
+	left: 300px;
+	top: 30px;
+}
+
+.upper-left-box {
+	position: absolute;
+	left:-110%;
+	top:-2px;
+}
+
+.upper-right-box {
+	position: absolute;
+	left:110%;
+	top:-2px;
+}
+
+.middle-box {
+	position: absolute;
+	left:-2px;
+	top:110%;
+}

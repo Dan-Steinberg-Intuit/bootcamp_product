@@ -1,0 +1,52 @@
+
+h2 {
+	font-family: Arial, Helvetica;
+	font-weight: normal;
+	text-align: center;
+}
+
+header {
+	background-color: lightskyblue;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	height: 100px;
+}
+
+aside {
+	float: left;
+	background-color: palegreen;
+	border: 2px solid black;
+	height: 300px;
+	width: 200px;
+}
+
+article {
+	float: right;
+	background-color: silver;
+	border: 2px solid black;
+	margin-left: 20px;	
+	height: 300px;
+	width: 550px;
+}
+
+footer {
+	background-color: plum;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	height: 100px;
+}
+
+.main-section {
+	margin: 20px;		
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+.break {
+	clear: both;
+}

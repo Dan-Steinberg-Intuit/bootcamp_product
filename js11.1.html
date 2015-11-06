@@ -1,84 +1,29 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="js10.1.css">
-		<script src="js10.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="js11.1.css">
 	</head>
 
 	<body>
 
-		<header>
-			<h2>Header</h2>
-		</header>
+		<section class="container">
 
-		<div class="main-section">
-			<aside>
-				<h2>Aside</h2>
-			</aside>
-
-			<article>
-				<h2>Main Form</h2>
-
-				<form name="mainForm" onsubmit="return validateForm()">
-					<div>
-						<label for="formFirstName" class="formlabel">First Name:</label>
-						<input type="text" id="formFirstName" name="firstName" pattern="[a-zA-Z\d']+" required>
-
-						<label for="formLastName" class="formlabel">Last Name:</label>
-						<input type="text" id="formLastName" name="lastName" pattern="[a-zA-Z\d']+" required>
-					</div>
-
-					<br>
-
-					<div>
-						<label for="formEmail" class="formlabel">Email:</label>
-						<input type="email" id="formEmail" name="email">
-
-						<label for="formPhoneNumber" class="formlabel">Phone Number:</label>
-						<input type="tel" id="formPhoneNumber" name="phoneNumber" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
-					</div>
-
-					<br>
-
-					<div>
-						<label for="formBirthDate" class="formlabel">Date of Birth:</label>
-						<input type="date" id="formBirthDate" name="birthdate">
-
-						<label for="formFavNumber" class="formlabel">Favorite Number (1 to 100):</label>
-						<input type="number" min=1 max=100 id="formFavNumber" name="favNumber">
-					</div>
-
-					<br>
-
-					<div>
-						<label for="formMovieQuote" class="formlabel">My favorite movie quote:</label>
-						<textarea id="formMovieQuote" name="movieQuote"></textarea>
-					</div>
-
-					<br>
-
-					<div>
-						<label for="formPassword" class="formlabel">Password:</label>
-						<input type="password" id="formPassword" name="password" required>
-
-						<label for="formPasswordVerify" class="formlabel">Verify Password:</label>
-						<input type="password" id="formPasswordVerify" name="passwordVerify" required>
-					</div>
-
-					<br>
-
-					<input type="submit" id="formSubmit" name="submit">
-
-				</form>
-			</article>
-
-			<div class="break">
+			<div class="left-section">
+				<button id="regIpsum">Regular Ipsum</button>
+				<button id="hipIpsum">Hipster Ipsum</button>
+				<button id="boozeIpsum">Liquor Ipsum</button>
 			</div>
-		</div>
 
-		<footer>
-			<h2>Footer</h2>
-		</footer>
+			<div class="right-section">
+				<div class="results-container">
+					<div class="results-box"></div>
+				</div>
+				<img src="http://www.photographyblogger.net/wp-content/uploads/2012/10/16.jpg" class="fixed-image">
+			</div>
 
+		</section>
+
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js11.1.js"></script>
 	</body>
 </html>

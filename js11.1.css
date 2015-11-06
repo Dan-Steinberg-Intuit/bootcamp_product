@@ -1,5 +1,49 @@
+button {
+	float: left;
+	width: 150px;
+	height: 50px;
+	margin: 20px;
+	font-size: 14px;
+}
+
+.container {
+	margin: 0px auto;
+	width: 80%;
+}
+
+.left-section {
+	float: left;
+}
+
+.right-section {
+	float: left;
+}
+
+.results-container {
+	border: 1px solid;
+	margin: 20px;
+	width: 400px;
+	height:400px;
+}
+
+.results-box {
+	padding: 10px;
+	display: none;
+}
+
+.fixed-image {
+	position: relative;
+	margin: 0px 20px;
+	left: 124px;
+	width: 190px;
+	height: 152px;
+}
+
+
 .break {
 	clear: both;
 }
+
+
 
 

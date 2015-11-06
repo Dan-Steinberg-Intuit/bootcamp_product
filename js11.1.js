@@ -1,39 +1,50 @@
-function validateForm() {
-	var mainForm = document.forms["mainForm"];
-	var password1 = mainForm["password"].value;
-	var password2 = mainForm["passwordVerify"].value;
+// define the text segments
+var regularIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.";
+var hipsterIpsum = "Tousled gentrify pop-up, hammock pariatur deserunt you probably haven't heard of them. Shabby chic artisan ullamco, gastropub labore cold-pressed mixtape pug. Synth organic blue bottle nesciunt pariatur sapiente fugiat, eiusmod ad sustainable accusamus. DIY yuccie bicycle rights jean shorts, pour-over brooklyn dreamcatcher anim yr blog aesthetic scenester incididunt church-key post-ironic. Tattooed jean shorts before they sold out, chartreuse dolor bicycle rights freegan offal polaroid ea lumbersexual enim actually. Pitchfork microdosing swag, hella aute flannel direct trade taxidermy eiusmod venmo +1 duis biodiesel nisi hashtag. Veniam tofu kombucha echo park you probably haven't heard of them.";
+var liquorIpsum = "Liquor ipsum dolor sit amet lime rickey dalmore tobermory salmiakki koskenkorva, tortor zurracapote quisque; glen garioch hanky-panky. Quam primis egestas nulla chartreuse cursus id caridan glenlivet aenean dictumst bull shot proin, bengal, etiam, libero edradour; irish mist nunc. Metus, cherry herring vitae caipirinha. Mattis godfather grog et donec craigellachie litora nisi vehicula elit donec, felis interdum eleifend dui primis lectus habitasse edradour moscow mule pharetra mattis. Venenatis nostra, morbi, eleifend feugiat cursus bananarita habitasse link up bloody mary; velit johnny walker black facilisis. Arcu royal bermuda cocktail 7 crown pellentesque hurricane tortor porta in pretium enim clynelish, cras savoy affair.";
 
-	// name check
-	var nameRegex = /a-zA-Z\\d']+/;
-	var firstName = mainForm["firstName"];
-	var lastName = mainForm["firstName"];
-	if (!nameRegex.test(firstName)) {
-		alert("Only letters or numbers are allowed in the First Name field!");
-		return false;
-	}
-	if (!nameRegex.test(lastName)) {
-		alert("Only letters or numbers are allowed in the Last Name field!");
-		return false;
+
+function ChangeText(e) {
+
+	// select which piece of text to use
+	var text = "";
+	switch (e.currentTarget.id) {
+		case "regIpsum":
+			text = regularIpsum;
+			break;
+
+		case "hipIpsum":
+			text = hipsterIpsum;
+			break;
+			
+		case "boozeIpsum":
+			text = liquorIpsum;
+			break;			
 	}
 
-	// password check
-	if ( !password1 || !password2 || password1 !== password2 ) {
-		alert("The passwords must match!");
-		return false;
+	// If there is old text, fade it out and 
+	// then fade in the new stuff when done
+	if ($(".results-box").is(":visible")) {
+		$(".results-box").fadeOut(1500, function() {
+			SetNewText(text)
+		})
 	} else {
-		if (password1.length < 8) {
-			alert("Your password must be 8 characters of more!");
-			return false;
-		}
+		// Else just fade the new stuff in now
+		SetNewText(text);
 	}
 
-	// favorite number
-	var favNumber = mainForm["favNumber"].value;
-	if (favNumber < 1 || favNumber > 100) {
-		alert("Favorite Number must be between 1 and 100!");
-		return false;
-	}
-
-	// Else everything must have passed validation!
-	return true;
 }
+
+// Sets the next text and fade in
+function SetNewText(newText) {
+	$(".results-box").text(newText);
+	$(".results-box").fadeIn(1500);
+}
+
+
+// Main function
+$(function() {
+
+	// set up the click handlers
+	$("button").click(ChangeText);
+});

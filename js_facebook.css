@@ -1,0 +1,122 @@
+* {
+/*	outline: 1px solid; */
+}
+
+html, body {
+	margin:0;
+	padding:0;
+}
+
+.header {
+	clear: both;
+	background-color: #3A5795;
+	color: white;
+	height: 80px;
+	width: 100%;
+	min-width: 1000px;
+}
+
+.logo-text {
+	position: relative;
+	height: 30px;
+	left: 120px;
+	top: 25px;
+	color: white;
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.login {
+	float: right;
+	width: 600px;
+	height: 80px;
+/*	background-color: lightgray; */
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+}
+
+.login-form {
+	float: left;
+	padding-left: 50px;
+/*	background-color: teal;*/
+}
+
+.login-left, .login-middle, .login-right {
+	float: left;
+	margin-top: 10px;
+	width: 160px;
+}
+
+.login-label: {
+	height: 15px;
+}
+
+.login-checkbox {
+	float: left;
+}
+
+.main-section {
+	clear: both;
+/*	background-color: papayawhip; */
+	height: 500px;
+	min-width: 1000px;
+}
+
+.login-right {
+	width: 75px;
+	padding-top: 15px;
+}
+
+.info-aside {
+	float: left;
+/*	background-color: powderblue; */
+	width: 500px;
+	height: 500px;
+	padding-left: 120px;
+	font-family: Arial, Helvetica;
+}
+
+.info-header {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.info-text {
+	font-size: 17px;
+	margin-top: 13px;
+}
+
+.info-bold {
+	font-weight: bold;
+}
+
+.signup-area {
+	float: right;
+/*	background-color: pink; */
+	width: 600px;
+	height: 500px;
+}
+
+.signup-form {
+	font-family: 'Freight Sans Bold', 'Helvetica Neue', 'Segoe UI', 'Malgun Gothic', Meiryo, 'Microsoft JhengHei', helvetica, arial, sans-serif !important;;
+}
+
+.signup-header {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.footer {
+	clear: both;
+/*	background-color: lightblue;*/
+}
+
+
+.break {
+	clear: both;
+}
+
+
+
+

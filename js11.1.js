@@ -26,7 +26,7 @@ function ChangeText(e) {
 	// then fade in the new stuff when done
 	if ($(".results-box").is(":visible")) {
 		$(".results-box").fadeOut(1500, function() {
-			SetNewText(text)
+			SetNewText(text);
 		})
 	} else {
 		// Else just fade the new stuff in now
